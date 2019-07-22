@@ -12,40 +12,7 @@
 		  gtag('config', 'UA-144212535-1');
 		</script>
 
-		<!-- Structured data to index in Google Datasets search -->
-		<script type="application/ld+json">
-		{
-		  "@context":"https://schema.org/",
-		  "@type":"Dataset",
-		  "name":"SynthCity",
-		  "description":"SynthCity is a large scale synthetic point cloud dataset. Our dataset represents a synthetic Mobile Laser Scanner (MLS) in an Urban and Suburban environment. Developed to aid research in Machine Learning and Deep Learning for point cloud classification and segmentation.",
-		  "url":"http://www.synthcity.xyz",
-		  "identifier": "https://doi.org/10.5522/04/8851658.v1",
-		  "citation": "https://arxiv.org/abs/1907.04758",
-		  "keywords":[
-		     "Point Cloud > Mobile Laser Scanner",
-		     "Point Cloud > Classification",
-		     "Point Cloud > Segmentation",
-		     "Point Cloud > Synthetic",
-				 "lidar > Mobile Laser Scanner"
-		  ],
-		  "creator":{
-		     "@type":"Person",
-		     "sameAs": "https://orcid.org/0000-0002-8582-138X",
-		     "url": "https://www.ucl.ac.uk/3dimpact/about/phd-researchers/david-griffiths",
-		     "givenName":"David",
-		     "familyName":"Griffiths",
-		     "name": "David Griffiths"
-		     },
-		  "distribution":
-		     {
-		        "@type":"DataDownload",
-		        "encodingFormat":"parquet",
-		        "contentUrl":"http://www.synthcity.xyz/download.html"
-		     }
-		}
-		</script>
-
+		
 		<title>FireNet</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -74,220 +41,6 @@
 					</div>
 				</section>
 
-			<!-- Features -->
-				<section id="features">
-					<div class="container">
-						<header>
-							<!-- <h2>Home page for the SynthCity dataset.</h2> -->
-						</header>
-						<div class="row aln-center">
-
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Feature -->
-									<section>
-										<a class="image featured"><img src="images/pc_labels.png" alt="" /></a>
-										<header>
-											<h3>Full semantic labels</h3>
-										</header>
-										<p>Due to the nature of synthetically generating ground truth data, each simulated laser beam returns
-											the exact object id that it has hit. This allows us to obtain perfect, non-ambiguous labels. We categories
-										  each object into one of nine classes.</p>
-									</section>
-
-							</div>
-
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Feature -->
-									<section>
-										<a class="image featured"><img src="images/city1.jpg" alt="" /></a>
-										<header>
-											<h3>Realistic</h3>
-										</header>
-										<p>Our dataset starts from a highly realistic 3D model. A high poly count is chosen for realistic
-											 detailed geometry. Rich texture maps give the model realistic spectral properties.</a></p>
-									</section>
-
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Feature -->
-									<section>
-										<a class="image featured"><img src="images/pc_rgb.png" alt="" /></a>
-										<header>
-											<h3>Full RGB colour</h3>
-										</header>
-										<p>Our dataset contains RGB data for each point. We also provide the gps time for each individual measurement
-										   as well as a binary end of line indicator to enable single scan line processing easily.</p>
-									</section>
-							</div>
-						</div>
-					</div>
-				</section>
-
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div class="row">
-							<h3>General information about SynthCity</h3>
-							<p>With deep learning becoming a more prominent approach for automatic classification of three-dimensional point cloud data, a key bottleneck is the amount of high quality training data, especially when compared to that available for two-dimensional images. One potential solution is the use of synthetic data for pre-training networks, however the ability for models to generalise from synthetic data to real world data has been poorly studied for point clouds. Despite this, a huge wealth of 3D virtual environments exist, which if proved effective can be exploited. We therefore argue that research in this domain would be hugely useful. In this paper we present SynthCity an open dataset to help aid research. SynthCity is a 367.9M point synthetic full colour Mobile Laser Scanning point cloud. Every point is labelled from one of nine categories. We generate our point cloud in a typical Urban/Suburban environment using the BlenSor plugin for Blender.</p>
-
-							<!-- Table -->
-							<h3> Number of points per class and area. </h3>
-							<div class="table-custom">
-								<div class="table-header">
-									<div class="header__item"><a id="building" class="filter__link" >area</a></div>
-									<div class="header__item"><a id="building" class="filter__link" >building</a></div>
-									<div class="header__item"><a id="car" class="filter__link filter__link--number" >car</a></div>
-									<div class="header__item"><a id="vegetation" class="filter__link filter__link--number" >natural ground</a></div>
-									<div class="header__item"><a id="ground" class="filter__link filter__link--number" >ground</a></div>
- 									<div class="header__item"><a id="pole_like" class="filter__link filter__link--number" >pole like</a></div>
-									<div class="header__item"><a id="road" class="filter__link filter__link--number" >road</a></div>
-									<div class="header__item"><a id="street_furniture" class="filter__link filter__link--number" >street furniture</a></div>
-									<div class="header__item"><a id="natural_ground" class="filter__link filter__link--number" >tree</a></div>
-									<div class="header__item"><a id="road" class="filter__link filter__link--number" >pavement</a></div>
-									<div class="header__item"><a id="pole_like" class="filter__link filter__link--number" >total</a></div>
-
-								</div>
-								<div class="table-content">
-									<div class="table-row">
-										<div class="table-data">1</div>
-										<div class="table-data">14,355K</div>
-										<div class="table-data">591K</div>
-										<div class="table-data">372K</div>
-										<div class="table-data">503K</div>
-										<div class="table-data">239K</div>
-										<div class="table-data">26,410K</div>
-										<div class="table-data">198K</div>
-										<div class="table-data">1,034K</div>
-										<div class="table-data">2,532K</div>
-										<div class="table-data"><b>46.23M</b></div>
-									</div>
-								<div class="table-content">
-									<div class="table-row">
-										<div class="table-data">2</div>
-										<div class="table-data">12,241K</div>
-										<div class="table-data">1,123K</div>
-										<div class="table-data">526K</div>
-										<div class="table-data">832K</div>
-										<div class="table-data">248K</div>
-										<div class="table-data">32,818K</div>
-										<div class="table-data">97K</div>
-										<div class="table-data">1,707K</div>
-										<div class="table-data">2,981K</div>
-										<div class="table-data"><b>52.57M</b></div>
-									</div>
-								<div class="table-content">
-									<div class="table-row">
-										<div class="table-data">3</div>
-										<div class="table-data">16,222K</div>
-										<div class="table-data">915K</div>
-										<div class="table-data">186K</div>
-										<div class="table-data">712K</div>
-										<div class="table-data">206K</div>
-										<div class="table-data">26,521K</div>
-										<div class="table-data">227K</div>
-										<div class="table-data">866K</div>
-										<div class="table-data">2,546K</div>
-										<div class="table-data"><b>48.40M</b></div>
-									</div>
-								<div class="table-content">
-									<div class="table-row">
-										<div class="table-data">4</div>
-										<div class="table-data">14,767K</div>
-										<div class="table-data">510K</div>
-										<div class="table-data">563K</div>
-										<div class="table-data">622K</div>
-										<div class="table-data">175K</div>
-										<div class="table-data">25,111K</div>
-										<div class="table-data">415K</div>
-										<div class="table-data">1,673K</div>
-										<div class="table-data">2,800K</div>
-										<div class="table-data"><b>46.64M</b></div>
-									</div>
-								<div class="table-content">
-									<div class="table-row">
-										<div class="table-data">5</div>
-										<div class="table-data">11,424K</div>
-										<div class="table-data">909K</div>
-										<div class="table-data">897K</div>
-										<div class="table-data">593K</div>
-										<div class="table-data">256K</div>
-										<div class="table-data">29,239K</div>
-										<div class="table-data">92K</div>
-										<div class="table-data">2,358K</div>
-										<div class="table-data">2,982K</div>
-										<div class="table-data"><b>48.75M</b></div>
-									</div>
-								<div class="table-content">
-									<div class="table-row">
-										<div class="table-data">6</div>
-										<div class="table-data">16,521K</div>
-										<div class="table-data">709K</div>
-										<div class="table-data">918K</div>
-										<div class="table-data">1,034K</div>
-										<div class="table-data">174K</div>
-										<div class="table-data">26,782K</div>
-										<div class="table-data">365K</div>
-										<div class="table-data">2,234K</div>
-										<div class="table-data">3,184K</div>
-										<div class="table-data"><b>51,92M</b></div>
-									</div>
-									<div class="table-row">
-										<div class="table-data">7</div>
-										<div class="table-data">1,895K</div>
-										<div class="table-data">226K</div>
-										<div class="table-data">330K</div>
-										<div class="table-data">272K</div>
-										<div class="table-data">83K</div>
-										<div class="table-data">11,178K</div>
-										<div class="table-data">22K</div>
-										<div class="table-data">568K</div>
-										<div class="table-data">938K</div>
-										<div class="table-data"><b>15.51M</b></div>
-									</div>
-									<div class="table-row">
-										<div class="table-data">8</div>
-										<div class="table-data">4,833K</div>
-										<div class="table-data">544K</div>
-										<div class="table-data">607K</div>
-										<div class="table-data">984K</div>
-										<div class="table-data">171K</div>
-										<div class="table-data">25,914K</div>
-										<div class="table-data">36K</div>
-										<div class="table-data">962K</div>
-										<div class="table-data">2,702K</div>
-										<div class="table-data"><b>36.75M</b></div>
-									</div>
-									<div class="table-row">
-										<div class="table-data">9</div>
-										<div class="table-data">5,716K</div>
-										<div class="table-data">381K</div>
-										<div class="table-data">390K</div>
-										<div class="table-data">656K</div>
-										<div class="table-data">84K</div>
-										<div class="table-data">11,897K</div>
-										<div class="table-data">19K</div>
-										<div class="table-data">687K</div>
-										<div class="table-data">1,321K</div>
-										<div class="table-data"><b>21.15M</b></div>
-									</div>
-									<div class="table-row">
-										<div class="table-data"><b>Total</b></div>
-										<div class="table-data"><b>97.97M</b></div>
-										<div class="table-data"><b>4.78M</b></div>
-										<div class="table-data"><b>12.09M</b></div>
-										<div class="table-data"><b>6.21M</b></div>
-										<div class="table-data"><b>21.99M</b></div>
-										<div class="table-data"><b>215.87M</b></div>
-										<div class="table-data"><b>1.47M</b></div>
-										<div class="table-data"><b>5.91M</b></div>
-										<div class="table-data"><b>1.64M</b></div>
-										<div class="table-data"><b>367.95M</b></div>
-									</div>
-								</div>
-							</div>
 
 
 							<!-- Content -->
@@ -302,11 +55,10 @@
 											</header>
 											<!--<a href="#" class="image featured"><img src="images/city4.jpg" alt="" /></a> -->
 											<h3>Future iterations</h3>
-											<p>Whilst SynthCity has been rendered to simulate a Mobile Laser Scanner (MLS). Blensor supports the ability
-												scan with a range of scanners, most notably a simulated Velodyne scanner. Such scanners are commonly used
-												for both MLS systems and autonomous vehicles. Re-rendering with a Velodyne scanner would only require the
-												AWS instances to be run again to produce the equivalent point cloud. If you are interested in sponsoring further
-											 rendering of the synthetic city please contact us using the details at the bottom of this page. </p>
+											<p>The labelling of the images (delineating the objects in the images) was crowd sourced. We used the 
+											dominating Amazon Mechanical Turk (MTurk) platform for this task. All crowd sourced labels were verified in-house and accepted or rejected accordingly.
+											As part of a continuous maintenance to the dataset we are exploring options to revisit rejected images. If you are interested in sponsoring further
+											 classes or images for FireNet please contact us using the details at the bottom of this page. </p>
 										</article>
 								</div>
 
@@ -328,19 +80,11 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date">July 15 2019</span>
+																<span class="date">July 31 2019</span>
 																<h3><a href="download.html">Dataset Download Available</a></h3>
 															</header>
 															<p>The SynthCity is now publically available for download.
-																 If you use our dataset in your research please consider citing our <a href="paper.html"style="color: rgb(0,0,0)">white paper</a>.</p>
-																   <p>
-																	    @inproceedings{griffiths2019synthcity, <br />
-										   									  title={{SynthCity: A large-scale synthetic point cloud}}, <br />
-										   										author={David Griffiths and Jan Boehm}, <br />
-										   										booktitle={ArXiv preprint}, <br />
-										  										year = {2019} <br />
-																					}
-																	  </p>
+															</p>
 														</article>
 												</li>
 											</ul>
@@ -380,7 +124,7 @@
 									<section>
 										<ul class="icons">
 											<li class="icon fa-envelope">
-												<a href="#">david.griffiths.16@ucl.ac.uk</a>
+												<a href="#">fabio.panella.16@ucl.ac.uk</a>
 												<a href="#">j.boehm@ucl.ac.uk</a>
 											</li>
 										</ul>
